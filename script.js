@@ -82,17 +82,6 @@ const revealObserver = new IntersectionObserver((entries)=>{
 },{threshold:0.2});
 revealTargets.forEach(t=>revealObserver.observe(t));
 
-/* Receipt "print" animation */
-const receiptEl = document.getElementById('receipt');
-const receiptObserver = new IntersectionObserver((entries)=>{
-  entries.forEach(entry=>{
-    if(entry.isIntersecting){
-      receiptEl.classList.add('printed');
-      receiptObserver.unobserve(entry.target);
-    }
-  });
-},{threshold:0.3});
-receiptObserver.observe(receiptEl);
 
 /* Live-ish join counter tick (cosmetic, deterministic not random-inflated) */
 let base = 312;
