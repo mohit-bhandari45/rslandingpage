@@ -1344,3 +1344,15 @@ footer {
   object-fit: cover;
   margin-bottom: 8px;
 }
+
+.solution-img {
+  flex: 1;
+  width: 100%;
+  max-width: 320px;
+  object-fit: contain;
+  border-radius: 16px;
+  background: rgba(229, 9, 20, 0.08);
+  box-shadow: 0 12px 30px -10px rgba(229, 9, 20, 0.4);
+  border: 1px solid rgba(229, 9, 20, 0.1);
+  padding: 12px;
+}
