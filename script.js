@@ -89,7 +89,7 @@ revealTargets.forEach(t=>revealObserver.observe(t));
 
 
 /* Live-ish join counter tick (cosmetic, deterministic not random-inflated) */
-let base = 312;
+let base = 512;
 const heroCount = document.getElementById('heroCount');
 const badgeCount = document.getElementById('badgeCount');
 setInterval(()=>{
