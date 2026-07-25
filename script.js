@@ -10,10 +10,14 @@ function updateCountdown(){
   const h = Math.floor((diff/(1000*60*60))%24);
   const m = Math.floor((diff/(1000*60))%60);
   const s = Math.floor((diff/1000)%60);
-  document.getElementById('cd-d').textContent = String(d).padStart(2,'0');
-  document.getElementById('cd-h').textContent = String(h).padStart(2,'0');
-  document.getElementById('cd-m').textContent = String(m).padStart(2,'0');
-  document.getElementById('cd-s').textContent = String(s).padStart(2,'0');
+  const cdd = document.getElementById('cd-d');
+  if(cdd) cdd.textContent = String(d).padStart(2,'0');
+  const cdh = document.getElementById('cd-h');
+  if(cdh) cdh.textContent = String(h).padStart(2,'0');
+  const cdm = document.getElementById('cd-m');
+  if(cdm) cdm.textContent = String(m).padStart(2,'0');
+  const cds = document.getElementById('cd-s');
+  if(cds) cds.textContent = String(s).padStart(2,'0');
 }
 updateCountdown();
 setInterval(updateCountdown, 1000);
@@ -23,7 +27,8 @@ setInterval(updateCountdown, 1000);
    ============================================================ */
 const SEATS_TOTAL = 40;
 const SEATS_LEFT = 9; // <-- edit manually each batch
-document.getElementById('seatsLine').textContent = `Only ${SEATS_LEFT} of ${SEATS_TOTAL} seats left`;
+const seatsLine = document.getElementById('seatsLine');
+if (seatsLine) seatsLine.textContent = `Only ${SEATS_LEFT} of ${SEATS_TOTAL} seats left`;
 
 /* ============================================================
    ACCORDIONS
