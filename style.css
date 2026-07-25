@@ -43,6 +43,8 @@
 html {
   scroll-behavior: smooth;
   -webkit-tap-highlight-color: transparent;
+  overflow-x: hidden !important;
+  max-width: 100vw !important;
 }
 
 body {
@@ -50,7 +52,8 @@ body {
   color: var(--text-hi);
   font-family: var(--font-body);
   line-height: 1.5;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
+  max-width: 100vw !important;
   padding-bottom: 78px;
   /* room for sticky mobile bar */
 }
@@ -118,6 +121,10 @@ h4 {
   border: 1px solid rgba(255, 255, 255, 0.35);
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.06);
+  white-space: normal;
+  text-align: center;
+  height: auto;
+  max-width: 100%;
 }
 
 .eyebrow.pink {
@@ -172,10 +179,12 @@ section {
   font-family: var(--font-display);
   font-weight: 700;
   font-size: 16px;
-  padding: 17px 30px;
+  padding: 16px 24px;
   border-radius: 999px;
   transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
-  white-space: nowrap;
+  white-space: normal;
+  text-align: center;
+  line-height: 1.2;
 }
 
 .btn-primary {
@@ -297,8 +306,10 @@ section {
 }
 
 .main-logo {
-  height: 54px;
-  width: auto;
+  height: auto;
+  max-height: 54px;
+  max-width: 90%;
+  object-fit: contain;
   margin: 0 auto 28px;
   display: block;
 }
@@ -335,11 +346,9 @@ section {
   font-family: var(--font-mono);
   font-size: 13px;
   color: var(--text-dim);
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  flex-wrap: wrap;
-  justify-content: center;
+  text-align: center;
+  line-height: 1.6;
+  max-width: 100%;
 }
 
 .trust-line .dot {
@@ -348,6 +357,8 @@ section {
   border-radius: 50%;
   background: var(--red);
   display: inline-block;
+  vertical-align: middle;
+  margin: 0 6px;
 }
 
 .hero-visual {
@@ -366,8 +377,10 @@ section {
 
 .phone-strip {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 10px;
-  overflow: hidden;
+  width: 100%;
 }
 
 .phone-card {
